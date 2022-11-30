@@ -3,7 +3,10 @@ Contents
 
         Transfer from angel-v-demon-old
             * work-log
-            project-analysis
+            * project-analysis
+            * project-requirements
+            * systems-testing
+            * From README.md to README_temp.md
         
     Work Done
 

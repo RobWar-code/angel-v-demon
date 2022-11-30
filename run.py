@@ -128,13 +128,13 @@ def sentence_loop(num_paragraphs, player_level, start_num_fairies,
             print("Correct")
 
     if failed:
-        user_input = input("Enter Y to replay game else ENTER: ")
+        user_input = input("Enter Y to replay game else ENTER: \n")
         if user_input == "Q" or user_input == "q":
             raise SystemExit()
         if user_input == "Y" or user_input == "y":
             replay = True
         else:
-            user_input = input("Enter Y to play a new game else ENTER: ")
+            user_input = input("Enter Y to play a new game else ENTER: \n")
             if user_input == "Q" or user_input == "q":
                 raise SystemExit()
             if user_input == "Y" or user_input == "y":
@@ -157,7 +157,7 @@ def sentence_loop(num_paragraphs, player_level, start_num_fairies,
 
         # Offer of new game
         print()
-        user_input = input("Play another game Y or Q to quit: ")
+        user_input = input("Play another game Y or Q to quit: \n")
         if user_input == "Y" or user_input == "y":
             new_game = True
         else:
@@ -206,7 +206,7 @@ def get_user_corrections():
     failed = False
     while invalid:
         print()
-        user_input = input("Enter corrections: ")
+        user_input = input("Enter corrections: \n")
         if user_input == "Q" or user_input == "q":
             raise SystemExit()
         # Check the input against the angel's sentence
@@ -250,7 +250,7 @@ bold knight by an angel. However, before the knight can receive his fate,
 a demon seizes the copy and modifies some words on each line. Your mission is
 to restore it to its original form line by line and save the knight ...""")
     print()
-    user_input = input("Click ENTER key to continue - Q to quit: ")
+    user_input = input("Click ENTER key to continue - Q to quit: \n")
     if user_input == "Q" or user_input == "q":
         raise SystemExit()
 
@@ -277,7 +277,7 @@ to replace it. For Example:""")
     print("red=blue bear=dragon")
     print()
     print("You can leave the games any time by entering Q")
-    user_input = input("ENTER to continue, Q to quit: ")
+    user_input = input("ENTER to continue, Q to quit: \n")
     if user_input == "Q" or user_input == "q":
         raise SystemExit()
 
@@ -290,7 +290,7 @@ def enter_num_paras():
     while invalid:
         print()
         user_input = input("""Please enter number of paragraphs for \
-the story (1 to 5): """)
+the story (1 to 5): \n""")
         if user_input == "Q" or user_input == "q":
             raise SystemExit()
         if len(user_input) != 1:
@@ -311,7 +311,7 @@ def enter_player_level():
     while invalid:
         print()
         user_input = input("""Please enter player level\
- (1 to 4, 1 easiest): """)
+ (1 to 4, 1 easiest): \n""")
         if user_input == "Q" or user_input == "q":
             raise SystemExit()
         if len(user_input) != 1:

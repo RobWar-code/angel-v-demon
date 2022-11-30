@@ -10,7 +10,9 @@ Contents
             * angel-v-demon.py
             * story_template.py
 
-        Merge the .py files into run.py
+        * Merge the .py files into run.py
+        
+        Deploy to heroku client
         
     Work Done
 

@@ -290,12 +290,12 @@ def enter_num_paras():
     while invalid:
         print()
         user_input = input("""Please enter number of paragraphs for \
-the story (1 to 5): \n""")
+the story (1 to 4): \n""")
         if user_input == "Q" or user_input == "q":
             raise SystemExit()
         if len(user_input) != 1:
             print("Value entered was not valid")
-        elif user_input not in "12345":
+        elif user_input not in "1234":
             print("Number not valid")
         else:
             n = int(user_input)

@@ -1,0 +1,33 @@
+Contents
+    Work Due
+
+        Transfer this project to the new Heroku ready gitpod template angel-v-demon
+        
+    Work Done
+
+Work Due
+    * Comment all code functions
+
+    Review course project requirements
+
+    Start README
+
+   * Write Systems Test Plan
+        * Add reference to readme
+
+    Execute Systems Test Plan
+        ->Screen shot results for README,instructions and introduction already added
+
+    Add one or two more paragraph templates and test
+
+    Do python lint test - see: PEP8 - now replaced
+
+Work Done
+    20/11/22
+        * Code Sentence Template Data
+
+        * Write and Test Template Class methods
+
+        * Code and Test Sentence Text Class methods 
+
+        * Write and Test the main interactive loops functions

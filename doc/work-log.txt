@@ -1,19 +1,5 @@
 Contents
     Work Due
-
-        * Transfer from angel-v-demon-old
-            * work-log
-            * project-analysis
-            * project-requirements
-            * systems-testing
-            * From README.md to README_temp.md
-            * angel-v-demon.py
-            * story_template.py
-
-        * Merge the .py files into run.py
-        
-        Deploy to heroku client
-        
     Work Done
 
 Work Due
@@ -21,7 +7,9 @@ Work Due
 
     Review course project requirements
 
-    Start README
+    Upload readme-images
+
+    Complete Work on README
 
    * Write Systems Test Plan
         * Add reference to readme
@@ -34,6 +22,20 @@ Work Due
     Do python lint test - see: PEP8 - now replaced
 
 Work Done
+    30/11/22
+       * Transfer from angel-v-demon-old
+            * work-log
+            * project-analysis
+            * project-requirements
+            * systems-testing
+            * From README.md to README_temp.md
+            * angel-v-demon.py
+            * story_template.py
+
+        * Merge the .py files into run.py
+        
+        * Deploy to heroku client
+
     20/11/22
         * Code Sentence Template Data
 

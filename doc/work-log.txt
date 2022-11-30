@@ -1,7 +1,7 @@
 Contents
     Work Due
 
-        Transfer from angel-v-demon-old
+        * Transfer from angel-v-demon-old
             * work-log
             * project-analysis
             * project-requirements
@@ -9,6 +9,8 @@ Contents
             * From README.md to README_temp.md
             * angel-v-demon.py
             * story_template.py
+
+        Merge the .py files into run.py
         
     Work Done
 

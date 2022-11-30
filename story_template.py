@@ -6,15 +6,11 @@ import random
 import re
 
 
-"""
-    Methods for handling the sentence and paragraph template
-    data to generate variable stories.
-"""
-
-
 class TemplateHandler:
-
     """
+        Methods for handling the sentence and paragraph template
+        data to generate variable stories.
+
         Add in the template_paragraphs dictionary
         and declare the token list
     """
@@ -23,23 +19,23 @@ class TemplateHandler:
         self.token_list = []
         self.max_differences_per_sentence = max_differences_per_sentence
 
-    """
-        Clear the list of tokens and their values
-    """
     def clear(self):
+        """
+            Clear the list of tokens and their values
+        """
         self.token_list = []
 
-    """
-        Get the total number of paragraphs in the story template
-    """
     def get_num_paragraphs(self):
+        """
+            Get the total number of paragraphs in the story template
+        """
         return len(self.template_paragraphs)
 
-    """
-        Collect the angel and demon versions of a sentence as well as
-        the good and ill consequence sentences
-    """
     def get_sentence_texts(self, paragraph_num, sentence_num):
+        """
+            Collect the angel and demon versions of a sentence as well as
+            the good and ill consequence sentences
+        """
         # Get the angel's and demon's versions of the main sentence
         dual_text = self._get_angel_and_demon_text(paragraph_num, sentence_num)
         sentence_data = self.template_paragraphs[paragraph_num][sentence_num]
@@ -61,10 +57,10 @@ class TemplateHandler:
             "good_consequence": good_consequence
         }
 
-    """
-        Perform the word substitutions for either the demon or the angel
-    """
     def _get_single_sentence_text(self, sentence_data, is_angel):
+        """
+            Perform the word substitutions for either the demon or the angel
+        """
         out_text = sentence_data["template"]
         alternatives = sentence_data["alternatives"]
         # Perform each substitution
@@ -80,11 +76,11 @@ class TemplateHandler:
 
         return out_text
 
-    """
-        Perform the word substitutions for both angel and demon to
-        produce two sentences
-    """
     def _get_angel_and_demon_text(self, paragraph_num, sentence_num):
+        """
+            Perform the word substitutions for both angel and demon to
+            produce two sentences
+        """
         angel_text = ""
         demon_text = ""
         p = paragraph_num
@@ -130,19 +126,19 @@ class TemplateHandler:
 
         return [angel_text, demon_text]
 
-    """
-        Insert a token into the token list. This contains both the
-        angel's and the demon's values
-    """
     def _set_token(self, token_name, values):
+        """
+            Insert a token into the token list. This contains both the
+            angel's and the demon's values
+        """
         token_obj = [token_name, values[0], values[1]]
         self.token_list.append(token_obj)
 
-    """
-        Search and get the token (angel or demon value) from the token
-        list
-    """
     def _get_token(self, token_name, is_angel):
+        """
+            Search and get the token (angel or demon value) from the token
+            list
+        """
         for token in self.token_list:
             if token[0] == token_name:
                 value = token[1] if is_angel else token[2]
@@ -151,11 +147,11 @@ class TemplateHandler:
         print(f"_get_token: token not found: {token_name}")
         raise SystemExit()
 
-    """
-        Get list of template word replacement numbers that are
-        to be different between angel and demon
-    """
     def _get_word_diff_list(self, template_text):
+        """
+            Get list of template word replacement numbers that are
+            to be different between angel and demon
+        """
         num_substitutes = template_text.count("?")
         num_list = list(range(num_substitutes))
         # Select the word numbers to change
@@ -330,17 +326,17 @@ class StoryHandler(TemplateHandler):
         self.story_sentences = []
         self.reset()
 
-    """
-        Do settings to start or restart story
-    """
     def reset(self):
+        """
+            Do settings to start or restart story
+        """
         self.current_sentence_num = 0
 
-    """
-        Create a story from the template and append sentence data to
-        the story_sentences dictionary
-    """
     def create_story(self):
+        """
+            Create a story from the template and append sentence data to
+            the story_sentences dictionary
+        """
         # Clear any existing story
         self._clear()
         # Get the list of template paragraph numbers to use
@@ -364,20 +360,20 @@ class StoryHandler(TemplateHandler):
                 sentence_num += 1
         self.story_created = True
 
-    """
-        Print the angel's version of the story
-    """
     def print_angel_story(self):
+        """
+            Print the angel's version of the story
+        """
         for sentence_data in self.story_sentences:
             print(sentence_data["angel_text"])
             if sentence_data["good_consequence"]:
                 print(sentence_data["good_consequence"])
                 print()
 
-    """
-        Display the demon's version of the  current sentence
-    """
     def print_demon_current_sentence(self):
+        """
+            Display the demon's version of the  current sentence
+        """
         paragraph_end = False
         sentence_data = self.story_sentences[self.current_sentence_num]
         print(sentence_data["demon_text"])
@@ -386,36 +382,36 @@ class StoryHandler(TemplateHandler):
         self.current_sentence_num += 1
         return paragraph_end
 
-    """
-        Display the same demon's version of the sentence again
-    """
     def print_demon_previous_sentence(self):
+        """
+            Display the same demon's version of the sentence again
+        """
         sentence_data = self.story_sentences[self.current_sentence_num - 1]
         print(sentence_data["demon_text"])
 
-    """
-        Display the good consequence sentence arising from the current sentence
-    """
     def print_good_consequence(self):
+        """
+            Display the good consequence sentence arising from the current sentence
+        """
         sentence_data = self.story_sentences[self.current_sentence_num - 1]
         print(sentence_data["good_consequence"])
 
-    """
-        Display the ill consequence sentence arising from the current sentence
-    """
     def print_ill_consequence(self):
+        """
+            Display the ill consequence sentence arising from the current sentence
+        """
         sentence_data = self.story_sentences[self.current_sentence_num - 1]
         print(sentence_data["ill_consequence"])
 
-    """
-        Check the substitution string entered by the user as a string of
-        " red=blue ..." against the (angel's) sentence displayed (previous)
-        returns one of:
-            "invalid"
-            "match"
-            "no match"
-    """
     def test_angel_substitutes(self, subs):
+        """
+            Check the substitution string entered by the user as a string of
+            " red=blue ..." against the (angel's) sentence displayed (previous)
+            returns one of:
+                "invalid"
+                "match"
+                "no match"
+        """
         sub_list = subs.split()
         if len(sub_list) == 0:
             return "invalid"
@@ -448,15 +444,11 @@ class StoryHandler(TemplateHandler):
 
 
 # ------------------------------------------------------------------------
-"""
-    Array of the following:
-    {
-        template_paragraph_num: integer
-        template_sentence_num: integer
-        angel_text: string
-        demon_text: string
-        ill_consequence: string
-        good_consequence: string
-    }
-"""
+# Array of the following:
+#       template_paragraph_num: integer
+#       template_sentence_num: integer
+#       angel_text: string
+#       demon_text: string
+#       ill_consequence: string
+#       good_consequence: string
 story_sentences = []

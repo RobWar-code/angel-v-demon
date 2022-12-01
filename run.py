@@ -624,7 +624,123 @@ template_paragraphs = [
                     }
                 ]
             }
+        }
+    ],
+    [
+        {
+            "main_sentence": {
+                "template": "The knight ? ?.",
+                "alternatives": [
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["walked", "ran", "trotted", "hurried"]
+                    },
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["left", "right", "forwards"]
+                    }
+                ]
+            },
+            "ill_consequence": {
+                "template": "The knight ? to his ?",
+                "alternatives": [
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["plunged", "fell", "stumbled", "staggered"]
+                    },
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["doom", "fate", "death"]
+                    }
+                ]
+            },
+            "good_consequence": {}
         },
+        {
+            "main_sentence": {
+                "template": "In the room was a ? ?.",
+                "alternatives": [
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["green", "purple", "white", "red"]
+                    },
+                    {
+                        "definitive_id": "container",
+                        "acquired_id": "",
+                        "options": ["bottle", "glass", "container", "flask"]
+                    }
+                ]
+            },
+            "ill_consequence": {
+                "template": """The knight was suprised as an exploding ? ? \
+him down.""",
+                "alternatives": [
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "container",
+                        "options": []
+                    },
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["struck", "knocked", "blew"]
+                    }
+                ]
+            },
+            "good_consequence": {}
+        },
+        {
+            "main_sentence": {
+                "template": "The knight ? the ? from the ?.",
+                "alternatives": [
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["gulped", "swallowed", "drank", "slurped"]
+                    },
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["potion", "liquid", "liquor"]
+                    },
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "container",
+                        "options": []
+                    }
+                ]
+            },
+            "ill_consequence": {
+                "template": "The knight ? in a heap",
+                "alternatives": [
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["collapsed", "fell"]
+                    }
+                ]
+            },
+            "good_consequence": {
+                "template": "The knight ? and ? around.",
+                "alternatives": [
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["sang", "cheered", "laughed"]
+                    },
+                    {
+                        "definitive_id": "",
+                        "acquired_id": "",
+                        "options": ["danced", "jumped", "pranced"]
+                    }
+                ]
+            }
+        }
     ]
 ]
 

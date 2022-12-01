@@ -1,31 +1,340 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ANGEL V DEMON
 
-Welcome RobWar-code,
+A command-line adventure/memory game for a solo player.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+![Media Samples](/doc/readme-images/media-shots-crop.png "Media Samples")
 
-## Reminders
+## How To Play
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+To start the game, the player is presented with a short story (by an angel) 
+about a knight. The player is given a limited amount of time to memorise
+this and is then presented with each line of the story with one or more
+words altered (by a "demon") which he is to correct by entering the words
+to be altered and their replacements. The player is given a score if
+they successfully complete the correct story. A fairy may intervene
+to offer the player another chance in the case of error.
 
-## Creating the Heroku app
+At the end of each game the player is offered a chance to play the game
+with the same story (if the player failed) or to start a new game.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Features
 
-1. `heroku/python`
-2. `heroku/nodejs`
+The game can be played at 4 skill levels, and stories can have one to four
+paragraphs.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+Stories are generated at random from template paragraphs which have multiple
+choices of alternative words. Furthermore, paragraphs may be given in the story
+in any arrangement.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The words chosen by the "demon" are selected from the possible substitutions at
+random.
 
-Connect your GitHub repository and deploy as normal.
+During any session a track is kept of the high-score which is presented
+with the users score when a game is won.
 
-## Constraints
+Keyboard input is validated and input requests re-presented where necessary
+for the flow of the game. These inputs are tested as in Systems Tests below.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Future Features
+Additional template paragraphs can be added.
 
------
-Happy coding!
+Keywords may be linked to other words, so that the player can "learn"
+what is associated with what.
+
+A fairy could give a hint/clue for a word, if hints are included in the
+templates or in a word dictionary.
+
+## Data Model
+
+Each story is modelled as a class instance, by inheriting the story template
+class, which has methods for handling the paragraph template dictionary.
+The story itself is created as an instance at the start of each game.
+
+The story class also provides the methods for keeping track of and presenting
+each sentence to the user.
+
+## Background Documentation
+
+Further documentation is provided in the /doc directory.
+
+The project analysis and flow-diagram appear in /doc/project-analysis.txt
+
+
+## Testing 
+
+Each input has been manually tested as in Systems Tests below.
+
+## Development Staging
+
+The program was developed on gitpod, using the editor and python3
+command.
+
+The project began on angel-v-demon-old repository on github/gitpod, which used the
+standard CI template.
+
+It was then transferred to the angel-v-demon github/gitpod repository using the
+necessary CI Template for the Heroku browser terminal.
+
+Stage by stage commits were made.
+
+## Deployment
+Set-up was from the CI gitpod template for heroku web terminal.
+To link-up the python app to the web-page run simulation:
+Logon to the Heroku.com site
+Go to the dashboard
+Click on Create App
+Click on Settings
+Click on Config Vars
+Set Key: PORT, Value: 8000
+Click on Deploy tab
+Click on Connect to GitHub
+connect to angel-v-demon
+Click on Automatic Deploy
+Click on Manual Deploy
+Click on View when it appears, to ensure this is working
+
+## Credits
+CI Code Institute - The web browser terminal
+
+## Screen Shots
+
+Heroku Client Introduction
+
+![Heroku Client Introduction](/doc/readme-images/introduction-heroku.png "Heroku Client Introduction")
+
+Heroku Client Instructions
+
+![Heroku Client Instructions](/doc/readme-images/instructions-heroku.png "Heroku Client Instructions")
+
+Heroku Client Game Start
+
+![Heroku Client Game Start](/doc/readme-images/game-start-heroku.png "Heroku Client Game Start")
+
+## Systems Tests
+### Game Start Texts
+
+* Introduction Text
+
+![Introduction Text](/doc/readme-images/introduction-crop.png "Introduction Text")
+
+* Instruction Text
+
+![Instructions Text](/doc/readme-images/instructions-crop.png "Instructions Text")
+
+### Input Point Tests
+All input tests are performed on game 1 paragraph, player level 1.
+The Inn references relate to points on the flow-chart in 
+doc/project-analysis.txt
+
+Items completed are marked with * and screen shots given where
+appropriate.
+
+I01 Continue from introduction
+
+a. * Ensure input prompt is clearly understandable
+
+b. * Check response to garbage input
+
+c. N/A Check input validation
+
+d. * Check for availability of the quit option
+
+e. * Check that the logic flows correctly from the inputs
+
+![I01 Introduction](/doc/readme-images/introduction-crop.png "I01 introduction")
+
+I02 Continue from instructions
+
+a. * Ensure input prompt is clearly understandable
+
+b. * Check response to garbage input
+
+c. N/A Check input validation
+
+d. * Check for availability of the quit option
+
+e. * Check that the logic flows correctly from the inputs
+
+![I02 Instructions](/doc/readme-images/instructions-crop.png)
+
+I03 Input number of paragraphs
+
+a. * Ensure input prompt is clearly understandable
+
+b. * Check response to garbage input
+
+c. * Check input validation
+
+d. * Check for availability of the quit option
+
+e. * Check that the logic flows correctly from the inputs
+
+Prompt for number of paragraphs
+
+![I03 Number of Paragraphs](/doc/readme-images/i03-crop.png "I03 Number of Paragraphs")
+
+Garbage entered
+
+![I03 garbage entered](/doc/readme-images/i03-garbage-crop.png "I03 garbage entered")
+
+Invalid Number
+
+![I03 invalid number](/doc/readme-images/i03-invalid-number-crop.png "I03 invalid number")
+
+I04 Input player level
+
+a. * Ensure input prompt is clearly understandable
+
+b. * Check response to garbage input
+
+c. * Check input validation
+
+d. * Check for availability of the quit option
+
+e. * Check that the logic flows correctly from the inputs
+
+![I04 Input player level](/doc/readme-images/i04-crop.png "I04 Input player level")
+
+Input garbage
+
+![I04 Input garbage](/doc/readme-images/i04-garbage-crop.png "I04 Input garbage")
+
+Input invalid number
+
+![I04 Input invalid number](/doc/readme-images/i04-invalid-number-crop.png "I04 Input invalid number")
+
+Logic flow from valid player level
+
+![I04 Valid logic flow](/doc/readme-images/i04-logic-flow-crop.png "I05 Valid logic flow")
+
+I05 Input for replacement words
+
+a. * Ensure input prompt is clearly understandable
+
+b. * Check response to garbage input
+
+c. * Check input validation
+
+d. * Check for availability of the quit option
+
+e. Check that the logic flows correctly from the inputs
+
+    * Correct Answer
+
+        * General
+            Bug: word_loop() while condition not cancelled
+            Fix: inserted else and reset flag
+
+        * End of Paragraph
+
+        * End of Game
+
+    Incorrect Answer
+
+        * Another Chance
+            Bug: word_loop() fairy-count not found
+            Fix: pass and return the fairy_count variable from the calling function
+            Bug: word_loop() math.random() does not exist
+            Fix: use random.random()
+            Bug: sentence_loop() invalid use of . notation for dict reference
+            Fix: used bracketed notation ["xx"]
+
+        * Fairy Saves Life
+
+            * Continue to next sentence
+
+            * End of Game
+
+        Knight Fails
+            Bug: story_template.py print_ill_consequence() misspelled variable name
+            Fix: corrected spelling
+
+Enter Correction
+
+![I05 Enter Correction](/doc/readme-images/i05-crop.png "I05 Enter Correction")
+
+Correct Answer
+
+![I05 Correct Answer](/doc/readme-images/i05-correct-answer-crop.png "I05 Correct Answer")
+
+Fairy Saves Life after Incorrect Answer
+
+![I05 Fairy Saves Life](/doc/readme-images/i05-fairy-saves-life-crop.png "I05 Fairy saves life")
+
+Garbage entered
+
+![I05 Garbage Entered](/doc/readme-images/i05-garbage-crop.png "I05 Garbage Entered")
+
+Incorrect answer, another chance
+
+![I05 Incorrect - Another Chance](/doc/readme-images/i05-incorrect-other-chance-crop.png "I05 Incorrect - Another Chance")
+
+Invalid Inputs
+
+![I05 Invalid Input Sample 1](/doc/readme-images/i05-invalid-01-crop.png "I05 Invalid Input Sample 1")
+
+![I05 Invalid Input Sample 2](/doc/readme-images/i05-invalid-02-crop.png "I05 Invalid Input Sample 2")
+
+Paragraph Correct
+
+![I05 Paragraph Correct](/doc/readme-images/i05-paragraph-correct-crop.png "I05 Paragraph Correct")
+
+Player Wins
+
+![I05 Player Wins](/doc/readme-images/i05-win-crop.png "I05 Player Wins")
+
+I06 Input repeat same game
+
+a. * Ensure input prompt is clearly understandable
+
+b. * Check response to garbage input
+
+c. N/A Check input validation
+
+d. * Check for availability of the quit option
+
+e. * Check that the logic flows correctly from the inputs
+
+    Bug: story.print_demon_current_sentence() list index out of range
+    Fix: add a reset function to StoryHandler and call from replay in repeat_game_loop()
+
+![I06 Play game again](/doc/readme-images/i06-crop.png "I06 Play game again")
+
+I07 Input start another game
+
+a. * Ensure input prompt is clearly understandable
+
+b. * Check response to garbage input
+
+c. N/A Check input validation
+
+d. * Check for availability of the quit option
+
+e. * Check that the logic flows correctly from the inputs
+
+    Bug: New stories doubled
+    Fix: story_template.py StoryHandler.create_story() clear down story list
+
+![I07 Start new game](/doc/readme-images/i07-crop.png "I07 Start new game")
+
+I08 Input start another game - from I05 win
+
+*a. Ensure input prompt is clearly understandable
+
+*b. Check response to garbage input
+
+*c. Check input validation
+
+*d. Check for availability of the quit option
+
+*e. Check that the logic flows correctly from the inputs
+
+### Random Branch Point Tests
+    See: I05
+
+### Playability Tests
+
+Apart from the functionality of the inputs tested above, we need
+to check that the time which the user is given to memorise the
+text is believable. This is about 8 seconds for one paragraph
+at level 4 (the most difficult), just enough for a couple of quick scans.

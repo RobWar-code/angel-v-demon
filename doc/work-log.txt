@@ -7,14 +7,14 @@ Work Due
 
     Review course project requirements
 
-    Upload readme-images
+    * Upload readme-images
 
     Complete Work on README
 
-   * Write Systems Test Plan
+    * Write Systems Test Plan
         * Add reference to readme
 
-    Execute Systems Test Plan
+    *Execute Systems Test Plan
         ->Screen shot results for README,instructions and introduction already added
 
     Add one or two more paragraph templates and test

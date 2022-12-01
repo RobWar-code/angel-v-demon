@@ -2,6 +2,61 @@
 
 A command-line adventure/memory game for a solo player.
 
+![Media Samples](/doc/readme-images/media-shots-crop.png "Media Samples")
+
+## How To Play
+
+    To start the game, the player is presented with a short story (by an angel) 
+    about a knight. The player is given a limited amount of time to memorise
+    this and is then presented with each line of the story with one or more
+    words altered (by a "demon") which he is to correct by entering the words
+    to be altered and their replacements. The player is given a score if
+    they successfully complete the correct story. A fairy may intervene
+    to offer the player another chance in the case of error.
+
+    At the end of each game the player is offered a chance to play the game
+    with the same story (if the player failed) or to start a new game.
+
+## Features
+
+    The game can be played at 4 skill levels, and stories can have one to four
+    paragraphs.
+
+    Stories are generated at random from template paragraphs which have multiple
+    choices of alternative words. Furthermore, paragraphs may be given in the story
+    in any arrangement.
+
+    The words chosen by the "demon" are selected from the possible substitutions at
+    random.
+
+    During any session a track is kept of the high-score which is presented
+    with the users score when a game is won.
+
+    Keyboard input is validated and input requests re-presented where necessary
+    for the flow of the game. These inputs are tested as in Systems Tests below.
+
+## Future Features
+    Additional template paragraphs can be added.
+
+    Keywords may be linked to other words, so that the player can "learn"
+    what is associated with what.
+
+    A fairy could give a hint/clue for a word, if hints are included in the
+    templates or in a word dictionary.
+
+## Data Model
+
+    Each story is modelled as a class instance, by inheriting the story template
+    class, which has methods for handling the paragraph template dictionary.
+    The story itself is created as an instance at the start of each game.
+
+    The story class also provides the methods for keeping track of and presenting
+    each sentence to the user.
+
+## Testing 
+
+    Each input has been manually tested as in Systems Tests below.
+    
 ## Screen Shots
 
 Heroku Client Introduction
@@ -225,15 +280,15 @@ e. * Check that the logic flows correctly from the inputs
 
 I08 Input start another game - from I05 win
 
-a. Ensure input prompt is clearly understandable
+*a. Ensure input prompt is clearly understandable
 
-b. Check response to garbage input
+*b. Check response to garbage input
 
-c. Check input validation
+*c. Check input validation
 
-d. Check for availability of the quit option
+*d. Check for availability of the quit option
 
-e. Check that the logic flows correctly from the inputs
+*e. Check that the logic flows correctly from the inputs
 
 ### Random Branch Point Tests
     See: I05

@@ -24,11 +24,11 @@ LO3 Adequately use standard programming constructs: repetition, selection, funct
 3.2 	* Implement exception/error handling to optimise the user experience
 
 LO4 Explain what a given program does
-4.1 	Use consistent and effective markdown formatting that is well-structured, easy to follow, and has few grammatical errors when writing a README file.
-4.2 	Write a README.md file in English for the Python application that explains its purpose and the value that it provides to its users.
+4.1 	* Use consistent and effective markdown formatting that is well-structured, easy to follow, and has few grammatical errors when writing a README file.
+4.2 	* Write a README.md file in English for the Python application that explains its purpose and the value that it provides to its users.
 
 LO5 Identify and repair coding errors in a program
-5.1 	Implement basic manual testing procedures for code validation
+5.1 	* Implement basic manual testing procedures for code validation
 
 LO6 Use library software for building a graphical user interface, or command-line interface, or web application, or mathematical software
 6.1 	* Implement the use of external Python libraries where appropriate to provide the functionality that the project requires.
@@ -41,15 +41,15 @@ LO8 Demonstrate and document the development process through a version control s
 8.1 	* Use Git & GitHub for version control of the web application up to deployment.
 
 LO9 Deploy a command-line application
-9.1 	Deploy a final version of the Python Essentials application code to a cloud-based platform.
-9.2 	Ensure that the deployed application is free of commented out code.
+9.1 	* Deploy a final version of the Python Essentials application code to a cloud-based platform.
+9.2 	* Ensure that the deployed application is free of commented out code.
 All Pass criteria must be achieved for a pass to be awarded.
 Merit Performance
 
 To evidence performance at the MERIT level, a learner will, in general, demonstrate characteristics
 of performance at the MERIT level, as suggested below. However, the learner must achieve ALL listed merit criteria.
 
-The learner has a clear rationale for the development of this project and has produced a fully functioning, 
+* The learner has a clear rationale for the development of this project and has produced a fully functioning, 
 documented application for a real-life audience. Data validation and user feedback are all evident in the code 
 and the working application. There are no logic errors in the code, and the application functions as expected.
 
@@ -62,7 +62,7 @@ progress indicators.
 Code is well-organised and easy to follow, and the application has been fully tested, 
 following a manual testing procedure, with no apparent errors left in the code.
 
-The development process is evident through commit messages. The project’s documentation provides a 
+* The development process is evident through commit messages. The project’s documentation provides a 
 clear rationale for the development of this project.
 
 The application is robust and deals with external errors gracefully (user input).
@@ -71,19 +71,19 @@ The application is robust and deals with external errors gracefully (user input)
 3.1 	* Demonstrate a clear understanding of programming fundamental constructs. and their relationships
 3.2 	* Implement OOP if appropriate to the project needs.
 4.1 	* Document the work undertaken to plan this project’s logic through flow charts or diagrams
-5.1 	Document validation error-based fixes implemented and identify and explain any unsolved validation errors.
-5.2 	Document the implementation of manual testing for code validation(using PEP Validators).
-6.1 	Separate and identify code written for the application and code from external sources 
+5.1 	* Document validation error-based fixes implemented and identify and explain any unsolved validation errors.
+5.2 	* Document the implementation of manual testing for code validation(using PEP Validators).
+6.1 	* N/A Separate and identify code written for the application and code from external sources 
         (e.g. libraries or tutorials)
 7.1 	* Efficiently implement the intended functionality as per the key project goals
-8.1 	Document the rationale as to why a particular library/libraries are necessary for the implementation of the project.
+8.1 	* Document the rationale as to why a particular library/libraries are necessary for the implementation of the project.
 8.2 	* Commit often for each feature/fix, ensuring that commits are small, well-defined and have clear, 
         descriptive messages.
-8.3 	Demonstrate, through screenshots, what the project outcomes are and how they have been met.
-8.4 	Present a clear rationale for the development of the project in the README, demonstrating that 
+8.3 	* Demonstrate, through screenshots, what the project outcomes are and how they have been met.
+8.4 	* Present a clear rationale for the development of the project in the README, demonstrating that 
         it has a clear, well-defined purpose addressing the critical goals of the application for a 
         particular target audience (or multiple related audiences).
-9.1 	Document the deployment procedure in a section in the README file.
+9.1 	* Document the deployment procedure in a section in the README file.
 All Merit criteria must be achieved for merit to be awarded.
 Distinction Performance
 
@@ -92,35 +92,35 @@ and will demonstrate characteristics of high-level performance as described belo
 
 Characteristics of performance at DISTINCTION level:
 
-The learner has documented a clear, justified rationale for a real-world application
+* The learner has documented a clear, justified rationale for a real-world application
 
-The development of the project has resulted in a fully-functioning Python application with a command-line interface
+* The development of the project has resulted in a fully-functioning Python application with a command-line interface
 
-There are no logic errors in the code. Where there is a clear breach of accepted design/UX principles 
+* There are no logic errors in the code. Where there is a clear breach of accepted design/UX principles 
 or accepted good practice in code organisation, these are fully justified, appropriate and acceptable 
 to the target user. It matches the design and demonstrates the characteristics of craftsmanship in the code. 
-The resulting application is original and not a copy of any walkthrough projects encountered in the unit
+* The resulting application is original and not a copy of any walkthrough projects encountered in the unit
 
 Amplification (craftsmanship):
 
 Design
 
-The design of the command line application demonstrates the main principles of imperative programming.
+* The design of the command line application demonstrates the main principles of imperative programming.
 
 User Control
 
-    All interaction with the application would be likely to produce a positive emotional response 
+    * All interaction with the application would be likely to produce a positive emotional response 
     within the user. This is down to the flow of information and all interaction feedback.
-    Users are never asked for information that the application already has.
-    Errors resulting from user or data actions are reported to the user.
+    * Users are never asked for information that the application already has.
+    * Errors resulting from user or data actions are reported to the user.
 
 Consistency
 
-    Consistency across all data operations,
+    * Consistency across all data operations,
 
 Confirmation
 
-    User and data actions are confirmed where appropriate, feedback is given at all times.
+    * User and data actions are confirmed where appropriate, feedback is given at all times.
 
 Any design decisions that contravene accepted user interaction principles are identified and 
 described (comments in code or a section in the README)
@@ -129,13 +129,13 @@ Development and Implementation
 
 Code demonstrates the characteristics of ‘clean code’:
 
-Consistent and appropriate naming conventions within code and in file naming, e.g.
+* Consistent and appropriate naming conventions within code and in file naming, e.g.
 
-    file names, class names, function names and variable names are descriptive and consistent
+    * file names, class names, function names and variable names are descriptive and consistent
 
 Readability
 
-    code is indented in a consistent manner to ease readability, and there are no unnecessary 
+    * code is indented in a consistent manner to ease readability, and there are no unnecessary 
     repeated blank lines all code is split into well-defined and commented sections
 
 Defensive design
@@ -149,26 +149,26 @@ Comments
 
 Compliant code
 
-    Python code is consistent in style and conforms to the PEP8 style guide
+    * Python code is consistent in style and conforms to the PEP8 style guide
 
 Robust code
 
-    no logic errors are found when running code
-    errors caused by user actions are handled
+    * no logic errors are found when running code
+    * errors caused by user actions are handled
     where used, API calls that fail to execute or return data will be 
         handled gracefully, with the site users notified in an obvious way
     * inputs are validated when necessary
 
-The entire design is implemented, providing an excellent solution to the users' 
+* The entire design is implemented, providing an excellent solution to the users' 
 demands and expectations and security consideration.
 
 Real-world application
 
-    The final application is aligned with the critical project ideas presented at the start of the project.
+    * The final application is aligned with the critical project ideas presented at the start of the project.
 
 Security features and practice are evidenced.
 
-    Any passwords and security-sensitive information created are stored in environment variables or in 
+    * N/A Any passwords and security-sensitive information created are stored in environment variables or in 
     files that are in .gitignore and are never committed to the repository
 
 Data is well structured
@@ -176,11 +176,11 @@ Data is well structured
     * data is fully modelled and matches the intended project structure
     data is well-structured
 
-Configuration and dependencies files are kept up to date.
+* Configuration and dependencies files are kept up to date.
 
-All noticeable errors have been corrected or documented:
+* All noticeable errors have been corrected or documented:
 
-    user actions do not cause errors in the terminal
+    * user actions do not cause errors in the terminal
 
 Version control software is used effectively:
 
@@ -191,12 +191,12 @@ Version control software is used effectively:
 
 The entire application development process is documented:
 
-    the purpose of the application is clearly described in the README
-    there is a clear separation between code written by the learner and code from external sources 
+    * the purpose of the application is clearly described in the README
+    * N/A there is a clear separation between code written by the learner and code from external sources 
     (e.g. libraries or tutorials).
-    All code from external sources is attributed to its source via comments above the code and 
+    * N/A All code from external sources is attributed to its source via comments above the code and 
     (for more extensive dependencies) in the README.
-    clear, well-described, explanatory commit messages describe the development process
+    * clear, well-described, explanatory commit messages describe the development process
     the README is easy to follow
 
 -->

@@ -104,6 +104,59 @@ The story itself is created as an instance at the start of each game.
 The story class also provides the methods for keeping track of and presenting
 each sentence to the user.
 
+TemplateHandler
+
+///python
+
+class TemplateHandler:
+    """
+        Methods for handling the sentence and paragraph template
+        data to generate variable stories.
+
+        Add in the template_paragraphs dictionary
+        and declare the token list
+    """
+    def __init__(self, template_paras, max_differences_per_sentence):
+        self.template_paragraphs = template_paras
+        self.token_list = []
+        self.max_differences_per_sentence = max_differences_per_sentence
+///
+
+StoryHandler
+
+///python
+
+    class StoryHandler(TemplateHandler):
+        """
+            Handler to generate and retain a specific story created by the
+            template handler. Methods for accessing the completed story
+        """
+        def __init__(self, template_paras, num_paragraphs,
+                    max_differences_per_sentence, story_sents, line_width):
+            """
+                Assign the initial data
+            """
+            # Set-up the template object
+            super().__init__(template_paras,
+                            max_differences_per_sentence)
+            self.num_paragraphs = num_paragraphs
+            self.story_sentences = story_sents
+            self.story_created = False
+            self.current_sentence_num = 0
+            self.line_width = line_width
+
+///
+
+## Libraries Used
+
+math - integer and floating point conversion
+random - sampling and selection
+platform - to determine os command to use
+os - for the console clear operation
+time - to set timer for game and for time dependent display of story
+re - for matching validity of text entered
+textwrap - to adjust text to line width
+
 ## Background Documentation
 
 Further documentation is provided in the /doc directory.

@@ -11,8 +11,9 @@ import random
 import platform
 import os
 import time
-import re
-import textwrap
+from re import fullmatch
+from textwrap import wrap
+from template_data import template_paragraphs
 
 # Globals
 LINE_WIDTH = 40  # To allow for display on mobiles
@@ -299,7 +300,7 @@ def enter_num_paras():
     invalid = True
     while invalid:
         print()
-        user_input = input("""Please enter number of paragraphs for\n
+        user_input = input("""Please enter number of paragraphs for
 the story (1 to 4): \n""")
         if user_input == "Q" or user_input == "q":
             raise SystemExit()
@@ -320,8 +321,8 @@ def enter_player_level():
     invalid = True
     while invalid:
         print()
-        user_input = input("""Please enter player level\n
- (1 to 4, 1 easiest): \n""")
+        user_input = input("""Please enter player level
+(1 to 4, 1 easiest): \n""")
         if user_input == "Q" or user_input == "q":
             raise SystemExit()
         if len(user_input) != 1:
@@ -495,271 +496,19 @@ class TemplateHandler:
         return num_list
 
 
-# --------------------------------------------------------------------
-# Sentence Template Data
-template_paragraphs = [
-    [
-        {
-            "main_sentence": {
-                "template": "The knight ? ?.",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["walked", "ran", "trotted", "hurried"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["left", "right", "forwards"]
-                    }
-                ]
-            },
-            "ill_consequence": {
-                "template": "The knight ? to his ?",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["plunged", "fell", "stumbled", "staggered"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["doom", "fate", "death"]
-                    }
-                ]
-            },
-            "good_consequence": {}
-        },
-        {
-            "main_sentence": {
-                "template": "In the room was a ? ?.",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["green", "black", "white", "red"]
-                    },
-                    {
-                        "definitive_id": "monster",
-                        "acquired_id": "",
-                        "options": ["dragon", "bear", "sphinx", "leopard"]
-                    }
-                ]
-            },
-            "ill_consequence": {
-                "template": "The knight was suprised by a ? as it ? him down.",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "monster",
-                        "options": []
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["struck", "knocked"]
-                    }
-                ]
-            },
-            "good_consequence": {}
-        },
-        {
-            "main_sentence": {
-                "template": "The knight ? the ? with his ? ?.",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["struck", "hit", "swiped"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "monster",
-                        "options": []
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["silver", "bronze", "iron"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["sword", "club", "dagger"]
-                    }
-                ]
-            },
-            "ill_consequence": {
-                "template": "The ? ? the knight and ? him",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "monster",
-                        "options": []
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["bit", "swiped", "struck"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["killed", "wasted", "destroyed"]
-                    }
-                ]
-            },
-            "good_consequence": {
-                "template": "The ? ? dead.",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "monster",
-                        "options": []
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["dropped", "fell", "collapsed"]
-                    }
-                ]
-            }
-        }
-    ],
-    [
-        {
-            "main_sentence": {
-                "template": "The knight ? ?.",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["walked", "ran", "trotted", "hurried"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["left", "right", "forwards"]
-                    }
-                ]
-            },
-            "ill_consequence": {
-                "template": "The knight ? to his ?",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["plunged", "fell", "stumbled", "staggered"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["doom", "fate", "death"]
-                    }
-                ]
-            },
-            "good_consequence": {}
-        },
-        {
-            "main_sentence": {
-                "template": "In the room was a ? ?.",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["green", "purple", "white", "red"]
-                    },
-                    {
-                        "definitive_id": "container",
-                        "acquired_id": "",
-                        "options": ["bottle", "glass", "container", "flask"]
-                    }
-                ]
-            },
-            "ill_consequence": {
-                "template": """The knight was suprised as an exploding ? ? \
-him down.""",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "container",
-                        "options": []
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["struck", "knocked", "blew"]
-                    }
-                ]
-            },
-            "good_consequence": {}
-        },
-        {
-            "main_sentence": {
-                "template": "The knight ? the ? from the ?.",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["gulped", "swallowed", "drank", "slurped"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["potion", "liquid", "liquor"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "container",
-                        "options": []
-                    }
-                ]
-            },
-            "ill_consequence": {
-                "template": "The knight ? in a heap",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["collapsed", "fell"]
-                    }
-                ]
-            },
-            "good_consequence": {
-                "template": "The knight ? and ? around.",
-                "alternatives": [
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["sang", "cheered", "laughed"]
-                    },
-                    {
-                        "definitive_id": "",
-                        "acquired_id": "",
-                        "options": ["danced", "jumped", "pranced"]
-                    }
-                ]
-            }
-        }
-    ]
-]
-
-
 # -------------------------------------------------------------------------
-"""
-    Handler to generate and retain a specific story created by the
-    template handler. Methods for accessing the completed story
-"""
 
 
 class StoryHandler(TemplateHandler):
     """
-        Assign the initial data
+        Handler to generate and retain a specific story created by the
+        template handler. Methods for accessing the completed story
     """
     def __init__(self, template_paras, num_paragraphs,
                  max_differences_per_sentence, story_sents, line_width):
+        """
+            Assign the initial data
+        """
         # Set-up the template object
         super().__init__(template_paras,
                          max_differences_per_sentence)
@@ -824,7 +573,7 @@ class StoryHandler(TemplateHandler):
         """
         paragraph_end = False
         sentence_data = self.story_sentences[self.current_sentence_num]
-        print(sentence_data["demon_text"])
+        self.wrap_and_print(sentence_data["demon_text"])
         if sentence_data["good_consequence"]:
             paragraph_end = True
         self.current_sentence_num += 1
@@ -835,7 +584,7 @@ class StoryHandler(TemplateHandler):
             Display the same demon's version of the sentence again
         """
         sentence_data = self.story_sentences[self.current_sentence_num - 1]
-        print(sentence_data["demon_text"])
+        self.wrap_and_print(sentence_data["demon_text"])
 
     def print_good_consequence(self):
         """
@@ -843,7 +592,7 @@ class StoryHandler(TemplateHandler):
             sentence
         """
         sentence_data = self.story_sentences[self.current_sentence_num - 1]
-        print(sentence_data["good_consequence"])
+        self.wrap_and_print(sentence_data["good_consequence"])
 
     def print_ill_consequence(self):
         """
@@ -851,7 +600,7 @@ class StoryHandler(TemplateHandler):
             sentence
         """
         sentence_data = self.story_sentences[self.current_sentence_num - 1]
-        print(sentence_data["ill_consequence"])
+        self.wrap_and_print(sentence_data["ill_consequence"])
 
     def test_angel_substitutes(self, subs):
         """
@@ -873,7 +622,7 @@ class StoryHandler(TemplateHandler):
             if len(terms) != 2:
                 return "invalid"
             for i in range(2):
-                if re.fullmatch("^[a-z]+$", terms[i]) is None:
+                if fullmatch("^[a-z]+$", terms[i]) is None:
                     return "invalid"
 
         # Loop through each term and make substitutions
@@ -896,7 +645,7 @@ class StoryHandler(TemplateHandler):
         """
             Wrap the text string at the set width and print it
         """
-        w = textwrap.wrap(text, self.line_width)
+        w = wrap(text, self.line_width)
         for s in w:
             print(s)
 

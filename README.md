@@ -19,6 +19,9 @@ with the same story (if the player failed) or to start a new game.
 
 ## Features
 
+The line width for the display is now taken to be 40 characters, to allow
+for mobiles.
+
 The game can be played at 4 skill levels, and stories can have one to four
 paragraphs.
 
@@ -66,8 +69,8 @@ Each input has been manually tested as in Systems Tests below.
 
 ## Development Staging
 
-The program was developed on gitpod, using the editor and python3
-command.
+The program was developed in Python on gitpod, using the gitpod editor and 
+python3 command.
 
 The project began on angel-v-demon-old repository on github/gitpod, which used the
 standard CI template.
@@ -75,23 +78,27 @@ standard CI template.
 It was then transferred to the angel-v-demon github/gitpod repository using the
 necessary CI Template for the Heroku browser terminal.
 
-Stage by stage commits were made.
+Stage by stage commits were made, using the git version control system.
 
 ## Deployment
 Set-up was from the CI gitpod template for heroku web terminal.
 To link-up the python app to the web-page run simulation:
-Logon to the Heroku.com site
-Go to the dashboard
-Click on Create App
-Click on Settings
-Click on Config Vars
-Set Key: PORT, Value: 8000
-Click on Deploy tab
-Click on Connect to GitHub
-connect to angel-v-demon
-Click on Automatic Deploy
-Click on Manual Deploy
-Click on View when it appears, to ensure this is working
+1. Logon to the Heroku.com site
+2. Go to the dashboard
+3. Click on Create App
+4. Click on Settings
+5. Click on Config Vars
+6. Set Key: PORT, Value: 8000
+7. Click on Deploy tab
+8. Click on Connect to GitHub
+9. connect to angel-v-demon
+10. Click on Automatic Deploy
+11. Click on Manual Deploy
+12. Click on View when it appears, to ensure this is working
+
+The browser implementation can be found at:
+
+[Browser App](https://angel-v-demon.herokuapp.com/ "Browser App")
 
 ## Credits
 CI Code Institute - The web browser terminal

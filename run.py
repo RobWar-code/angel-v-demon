@@ -12,8 +12,10 @@ import platform
 import os
 import time
 import re
+import textwrap
 
 # Globals
+LINE_WIDTH = 40  # To allow for display on mobiles
 story = None
 hi_score = 0
 
@@ -44,7 +46,7 @@ def main():
             template_paragraphs,
             num_paragraphs,
             max_differences_per_sentence,
-            story_sentences)
+            story_sentences, LINE_WIDTH)
 
         story.create_story()
         # Repeat game loop
@@ -757,7 +759,7 @@ class StoryHandler(TemplateHandler):
         Assign the initial data
     """
     def __init__(self, template_paras, num_paragraphs,
-                 max_differences_per_sentence, story_sents):
+                 max_differences_per_sentence, story_sents, line_width):
         # Set-up the template object
         super().__init__(template_paras,
                          max_differences_per_sentence)
@@ -765,6 +767,7 @@ class StoryHandler(TemplateHandler):
         self.story_sentences = story_sents
         self.story_created = False
         self.current_sentence_num = 0
+        self.line_width = line_width
 
     def _clear(self):
         self.story_sentences = []
@@ -809,9 +812,10 @@ class StoryHandler(TemplateHandler):
             Print the angel's version of the story
         """
         for sentence_data in self.story_sentences:
-            print(sentence_data["angel_text"])
+            # Get text and wrap it to line width
+            self.wrap_and_print(sentence_data["angel_text"])
             if sentence_data["good_consequence"]:
-                print(sentence_data["good_consequence"])
+                self.wrap_and_print(sentence_data["good_consequence"])
                 print()
 
     def print_demon_current_sentence(self):
@@ -887,6 +891,14 @@ class StoryHandler(TemplateHandler):
         if demon_text != angel_text:
             return "no match"
         return "match"
+
+    def wrap_and_print(self, text):
+        """
+            Wrap the text string at the set width and print it
+        """
+        w = textwrap.wrap(text, self.line_width)
+        for s in w:
+            print(s)
 
 
 # ------------------------------------------------------------------------

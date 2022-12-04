@@ -3,6 +3,9 @@ Contents
     Work Done
 
 Work Due
+    Include justification to 40 characters per line
+    to allow for mobiles
+    
     * Comment all code functions
 
     Review course project requirements
@@ -10,6 +13,7 @@ Work Due
     * Upload readme-images
 
     Complete Work on README
+        In description of classes show class definition as far as init
 
     * Write Systems Test Plan
         * Add reference to readme

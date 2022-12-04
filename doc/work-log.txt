@@ -3,32 +3,34 @@ Contents
     Work Done
 
 Work Due
-    * Include justification to 40 characters per line
-    to allow for mobiles
-    
-    * Transfer the sentence template dictionary to a separate
-    module
 
-    * Comment all code functions
-
-    Review course project requirements
-
-    * Upload readme-images
-
-    Complete Work on README
-        In description of classes show class definition as far as init
-
-    * Write Systems Test Plan
-        * Add reference to readme
-
-    * Execute Systems Test Plan
-        ->Screen shot results for README,instructions and introduction already added
-
-    * Add one or two more paragraph templates and test
-
-    Do python lint test - see: PEP8 - now replaced
 
 Work Done
+    04/12/22
+        * Include justification to 40 characters per line
+        to allow for mobiles
+        
+        * Transfer the sentence template dictionary to a separate
+        module
+
+        * Comment all code functions
+
+        * Review course project requirements
+
+        * Upload readme-images
+
+        * Complete Work on README
+            * In description of classes show class definition as far as init
+
+        * Write Systems Test Plan
+            * Add reference to readme
+
+        * Execute Systems Test Plan
+            ->Screen shot results for README,instructions and introduction already added
+
+        * Add one or two more paragraph templates and test
+
+        * Do python lint test - see: PEP8 - now replaced
     30/11/22
        * Transfer from angel-v-demon-old
             * work-log

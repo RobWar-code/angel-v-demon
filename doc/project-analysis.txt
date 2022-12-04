@@ -103,7 +103,7 @@
 	External Work					26/11/22		29/11/22
 	Coding							30/11/22		21/11/22		  7
 	Systems Testing					02/12/22		01/12/22          6
-	Readme							04/12/22
+	Readme							04/12/22		04/12/22		  4
 	Submission						08/01/23
 
 ## Logic Analysis

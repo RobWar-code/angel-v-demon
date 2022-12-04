@@ -151,12 +151,13 @@ def sentence_loop(num_paragraphs, player_level, start_num_fairies,
         target = num_paragraphs * 3 * expected_time_per_sentence
         score = player_level * (200 + target - diff_time)
         score_string = "Your Score is: " + str(score)
+        print(score_string)
         if hi_score > 0:
-            score_string += " High Score was: " + str(hi_score)
+            score_string = "High Score was: " + str(hi_score)
+            print(score_string)
         if score > hi_score:
             hi_score = score
         print()
-        print(score_string)
 
         # Offer of new game
         print()

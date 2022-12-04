@@ -286,9 +286,13 @@ Paragraph Correct
 
 ![I05 Paragraph Correct](/doc/readme-images/i05-paragraph-correct-crop.png "I05 Paragraph Correct")
 
-Player Wins
+Player Wins 1
 
 ![I05 Player Wins](/doc/readme-images/i05-win-crop.png "I05 Player Wins")
+
+Player Wins 2
+
+![I05 Player Wins 2](/doc/readme-images/i05-win-2-crop.png "I05 Player Wins 2")
 
 I06 Input repeat same game
 

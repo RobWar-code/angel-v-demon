@@ -4,6 +4,21 @@ A command-line adventure/memory game for a solo player.
 
 ![Media Samples](/doc/readme-images/media-shots-crop.png "Media Samples")
 
+## User Considerations
+
+Any end-user who would like to play an adventure or memory game with a 
+simple command-line interface.
+
+The game provides the user with a slightly different story at each play.
+To allow for added interest and abilities the game can be played at
+different skill levels.
+
+Both score and high score are reported for a player win, to allow
+the player to gauge their performance.
+
+All user inputs are clearly explained and checked for validity, with
+errors reported clearly to the user.
+
 ## How To Play
 
 To start the game, the player is presented with a short story (by an angel) 
@@ -200,6 +215,16 @@ To link-up the python app to the web-page run simulation:
 The browser implementation can be found at:
 
 [Browser App](https://angel-v-demon.herokuapp.com/ "Browser App")
+
+## Tools and Technologies
+
+- [python](https://www.python.org ) - used for the project code
+- [heroku](https://heroku.com) - used for linking the app to the browser
+- [CI Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template) - the github/gitpod template
+- [Gitpod](https://gitpod.io/) - used as the cloud-based IDE for development
+- [Git](https://git-scm.com/) - used for version control and commits
+- [GitHub](https://github.com/) - used as secure online storage of code
+- [GIMP](https://www.gimp.org/) - used for image cropping and resizing
 
 ## Credits
 CI Code Institute - The web browser terminal

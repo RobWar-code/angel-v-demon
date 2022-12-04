@@ -236,17 +236,17 @@
 
 	The template paragraphs objects therefore have the following structure:
 
-		template_paragraphs [
+		template_paragraphs = [
 			[
-				{ # First Sentence
+				{  # First Sentence
 
 					main_sentence: {
-						template: "words .. ? .. ?"
+						template: "words .. ? .. ?",
 						alternatives: [ 
 							{	
-								definitive_id: # string "" if n/a
-								acquired_id: # string "" if n/a
-								opts: [string, ...]
+								definitive_id: "",  # string "" if n/a
+								acquired_id: "",  # string "" if n/a
+								opts: [],  # [string, ...]
 							}
 							...
 						]
@@ -255,28 +255,28 @@
 					# template as above
 					}
 				},
-				...,
-				{ # Final Sentence
+				# ...,
+				{  # Final Sentence
 					main_sentence: {
 						template: "words .. ? .. ?"
 						alternatives: [ 
 							{	
-								definitive_id: # string "" if n/a
-								acquired_id: # string "" if n/a
-								opts: [string, ...]
+								definitive_id:  # string "" if n/a
+								acquired_id:  # string "" if n/a
+								opts:  # [string, ...]
 							}
-							...
+							# ...
 						]
 					},
 					good_consequence: {
-
+						# template as above
 					}
 					ill_consequence: {
-
+						# template as above
 					}
 				}
 			],
-			...
+			# ...
 		]
 
 

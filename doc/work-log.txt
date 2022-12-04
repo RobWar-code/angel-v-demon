@@ -3,9 +3,12 @@ Contents
     Work Done
 
 Work Due
-    Include justification to 40 characters per line
+    * Include justification to 40 characters per line
     to allow for mobiles
     
+    * Transfer the sentence template dictionary to a separate
+    module
+
     * Comment all code functions
 
     Review course project requirements
@@ -18,10 +21,10 @@ Work Due
     * Write Systems Test Plan
         * Add reference to readme
 
-    *Execute Systems Test Plan
+    * Execute Systems Test Plan
         ->Screen shot results for README,instructions and introduction already added
 
-    Add one or two more paragraph templates and test
+    * Add one or two more paragraph templates and test
 
     Do python lint test - see: PEP8 - now replaced
 

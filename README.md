@@ -41,6 +41,54 @@ for the flow of the game. These inputs are tested as in Systems Tests below.
 ## Future Features
 Additional template paragraphs can be added.
 
+Template is as follows:
+
+///python
+
+		template_paragraphs = [
+			[
+				{  # First Sentence
+
+					main_sentence: {
+						template: "words .. ? .. ?",
+						alternatives: [ 
+							{	
+								definitive_id: "",  # string "" if n/a
+								acquired_id: "",  # string "" if n/a
+								opts: [],  # [string, ...]
+							}
+							...
+						]
+					},
+					ill_consequence: {
+					# template as above
+					}
+				},
+				# ...,
+				{  # Final Sentence
+					main_sentence: {
+						template: "words .. ? .. ?"
+						alternatives: [ 
+							{	
+								definitive_id:  # string "" if n/a
+								acquired_id:  # string "" if n/a
+								opts:  # [string, ...]
+							}
+							# ...
+						]
+					},
+					good_consequence: {
+						# template as above
+					}
+					ill_consequence: {
+						# template as above
+					}
+				}
+			],
+			# ...
+		]
+
+///
 Keywords may be linked to other words, so that the player can "learn"
 what is associated with what.
 

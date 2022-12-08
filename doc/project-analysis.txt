@@ -100,7 +100,7 @@
 
 	Schedule						Completion		Actual		Actual Time (1/2 days)
 	Data and Logic Analysis			20/11/22		19/11/22          4
-	External Work					26/11/22		29/11/22
+	External Work					26/11/22		02/11/22
 	Coding							30/11/22		21/11/22		  7
 	Systems Testing					02/12/22		01/12/22          6
 	Readme							04/12/22		04/12/22		  4
@@ -143,7 +143,7 @@
    |  |  |  |
    |  |  |  |  check whether the replaced words match the original (angel version)
    |  |  |  |
-   |  |  |  |  if not correct
+   |  |  |  |  if not correct, print "WRONG" in Red, sleep, then clear console
    |  |  |  |
    |  |  |  |     if a fairy intervenes
    |  |  |  |
@@ -157,13 +157,15 @@
    |     |
    O-----------<---I07) prompt input another game
    |     |
-   |     |      Check whether this is last sentence of the paragraph
+   |     |      Print "Correct" in Yellow
+   |     |      clear console, Check whether this is last sentence of the paragraph
    |     |				 
-   |     |         display the good consequence of this sentence gratis
+   |     |         print angel cheers (yellow), print "Paragraph Consequence:", 
+   |     |		   display the good consequence of this sentence gratis
    |     |
-   |     o-----<if not end of story/instructions
+   |     o-----<if not end of story/instructions, sleep, clear console.
    |
-   |            display success message
+   |            
    |
    o-----------<I08) prompt input for play again
 

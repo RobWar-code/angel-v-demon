@@ -4,6 +4,41 @@ Contents
 
 Work Due
 
+    README
+        Code blocks in README - use backticks
+
+        Libraries - "-" before
+
+        Deployment - use example from tutor, link to CI template
+
+        Separate Systems Tests from Lint Tests
+
+        Add link to flowchart in /doc/project-analysis.txt
+
+        Link to commit history at Branch from angel-v-demon-old
+
+        Responsiveness tests on console
+
+        Browser console tests
+
+        Remove Docstring from README object modules
+        List Methods
+
+    Code
+        Include colorama for line colors
+            Update requirements.txt
+
+        Pick-out responses in color 
+            Add to specification
+
+        Thankyou for playing after quit
+
+        More clears between lines
+            Add to specification
+
+        Clear console function
+
+
 
 Work Done
     04/12/22

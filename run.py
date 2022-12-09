@@ -672,13 +672,7 @@ class StoryHandler(TemplateHandler):
 
 
 # ------------------------------------------------------------------------
-# Array of the following:
-#       template_paragraph_num: integer
-#       template_sentence_num: integer
-#       angel_text: string
-#       demon_text: string
-#       ill_consequence: string
-#       good_consequence: string
+# The story array for the story handler
 story_sentences = []
 
 # Call to user-interaction loop

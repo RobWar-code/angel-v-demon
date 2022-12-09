@@ -58,7 +58,7 @@ Additional template paragraphs can be added.
 
 Template is as follows:
 
-///python
+```python
 
 		template_paragraphs = [
 			[
@@ -103,12 +103,28 @@ Template is as follows:
 			# ...
 		]
 
-///
+```
+
 Keywords may be linked to other words, so that the player can "learn"
 what is associated with what.
 
 A fairy could give a hint/clue for a word, if hints are included in the
 templates or in a word dictionary.
+
+Story Dictionary
+
+```python
+
+# Array of the following:
+#       template_paragraph_num: integer
+#       template_sentence_num: integer
+#       angel_text: string
+#       demon_text: string
+#       ill_consequence: string
+#       good_consequence: string
+story_sentences = []
+
+```
 
 ## Data Model
 
@@ -121,31 +137,44 @@ each sentence to the user.
 
 TemplateHandler
 
-///python
+A class for creating paragraphs from templates
+
+```python
 
 class TemplateHandler:
-    """
-        Methods for handling the sentence and paragraph template
-        data to generate variable stories.
-
-        Add in the template_paragraphs dictionary
-        and declare the token list
-    """
     def __init__(self, template_paras, max_differences_per_sentence):
         self.template_paragraphs = template_paras
         self.token_list = []
         self.max_differences_per_sentence = max_differences_per_sentence
-///
+
+	def clear_self():
+	
+	def get_num_paragraphs():
+
+	def get_sentence_texts():
+
+	def _get_single_sentence_text():
+
+	def _get_angel_and_demon_text():
+
+	def _get_token()
+
+	def _set_token()
+
+	def _get_word_diff_list()
+
+	
+
+```
 
 StoryHandler
 
-///python
+To generate and retain a specific story created by the template
+handler. Methods for accessing the completed story.
+
+```python
 
     class StoryHandler(TemplateHandler):
-        """
-            Handler to generate and retain a specific story created by the
-            template handler. Methods for accessing the completed story
-        """
         def __init__(self, template_paras, num_paragraphs,
                     max_differences_per_sentence, story_sents, line_width):
             """
@@ -160,17 +189,38 @@ StoryHandler
             self.current_sentence_num = 0
             self.line_width = line_width
 
-///
+		def _clear():
+
+		def reset():
+
+		def create_story():
+
+		def print_angel_story():
+
+		def print_demon_current_sentence():
+
+		def print_demon_previous_sentence():
+
+		def print_good_consequence():
+
+		def print_ill_consequence():
+
+		def test_angel_substitutes():
+
+		def wrap_and_print():
+
+```
 
 ## Libraries Used
 
-math - integer and floating point conversion
-random - sampling and selection
-platform - to determine os command to use
-os - for the console clear operation
-time - to set timer for game and for time dependent display of story
-re - for matching validity of text entered
-textwrap - to adjust text to line width
+- math - integer and floating point conversion
+- random - sampling and selection
+- platform - to determine os command to use
+- os - for the console clear operation
+- time - to set timer for game and for time dependent display of story
+- re - for matching validity of text entered
+- colorama - screen text colors
+- textwrap - to adjust text to line width
 
 ## Background Documentation
 

@@ -24,23 +24,26 @@ Work Due
         Remove Docstring from README object modules
         List Methods
 
-    Code
-        Include colorama for line colors
-            Update requirements.txt
-
-        Pick-out responses in color 
-            Add to specification
-
-        Thankyou for playing after quit
-
-        More clears between lines
-            Add to specification
-
-        Clear console function
-
-
+        Do Systems Tests and Screenshots on the Heroku terminal
 
 Work Done
+    09/12/22
+
+    * Code
+        * Include colorama for line colors
+            Update requirements.txt
+
+        * Pick-out responses in color 
+            * Add to specification
+
+        * Thankyou for playing after quit
+
+        * More clears between lines
+            * Add to specification
+
+        * Clear console function
+
+
     04/12/22
         * Include justification to 40 characters per line
         to allow for mobiles

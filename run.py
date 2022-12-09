@@ -30,6 +30,8 @@ def main():
 
     global story
 
+    # Initialise Color Mode
+    colorama.init(autoreset=True)
     # Introduce the game
     display_introduction()
     games_ended = False
@@ -110,6 +112,7 @@ def sentence_loop(num_paragraphs, player_level, start_num_fairies,
     time_start = math.ceil(time.time())
     while not failed and got_sentence:
         # Print the next demon's sentence
+        clear_console()
         print("The Demon says:-")
         paragraph_end = story.print_demon_current_sentence()
         if paragraph_end:
@@ -121,23 +124,27 @@ def sentence_loop(num_paragraphs, player_level, start_num_fairies,
 
         if (paragraph_end and not failed):
             # Print the consequence
-            print("The angel cheers:- ")
+            clear_console()
+            print(colorama.Fore.GREEN + "The angel cheers:- ")
+            print("Completed Paragraph:")
             story.print_good_consequence()
+            time.sleep(6)
             if paragraph_count >= num_paragraphs:
                 got_sentence = False
         elif not paragraph_end and not failed:
-            print("Correct")
+            print(colorama.Fore.GREEN + "Correct")
+            time.sleep(4)
 
     if failed:
         user_input = input("Enter Y to replay game else ENTER: \n")
         if user_input == "Q" or user_input == "q":
-            raise SystemExit()
+            quit_game()
         if user_input == "Y" or user_input == "y":
             replay = True
         else:
             user_input = input("Enter Y to play a new game else ENTER: \n")
             if user_input == "Q" or user_input == "q":
-                raise SystemExit()
+                quit_game()
             if user_input == "Y" or user_input == "y":
                 new_game = True
 
@@ -163,7 +170,7 @@ def sentence_loop(num_paragraphs, player_level, start_num_fairies,
         if user_input == "Y" or user_input == "y":
             new_game = True
         else:
-            raise SystemExit()
+            quit_game()
 
     return {"new_game": new_game, "replay": replay}
 
@@ -177,17 +184,20 @@ def word_loop(fairy_count):
         # Get user replacement words
         failed = get_user_corrections()
         if failed:
-            print("WRONG - The demon chuckles..")
+            clear_console()
+            print(colorama.Fore.RED + "WRONG - The demon chuckles..")
             if fairy_count > 0:
                 fairy_count = fairy_count - 1
                 # The fairy intervenes
                 if random.random() < 0.5:
                     print()
-                    print("A fairy gives you another chance:")
+                    print(colorama.Fore.YELLOW +
+                          "A fairy gives you another chance:")
                     story.print_demon_previous_sentence()
                 else:
                     print()
-                    print("A fairy saves the knight's life")
+                    print(colorama.Fore.YELLOW +
+                          "A fairy saves the knight's life")
                     print()
                     try_again = False
                     failed = False
@@ -207,6 +217,11 @@ def clear_console():
     os.system("cls" if platform.system() == "Windows" else "clear")
 
 
+def quit_game():
+    print("You quit - Thankyou for Playing")
+    raise SystemExit()
+
+
 def get_user_corrections():
     """
         User input of corrections to demon's sentence. Validation of input.
@@ -217,7 +232,7 @@ def get_user_corrections():
         print()
         user_input = input("Enter corrections: \n")
         if user_input == "Q" or user_input == "q":
-            raise SystemExit()
+            quit_game()
         # Check the input against the angel's sentence
         result = story.test_angel_substitutes(user_input)
         if result == "match":
@@ -265,7 +280,7 @@ save the knight ...""")
     print()
     user_input = input("Click ENTER key to continue - Q to quit: \n")
     if user_input == "Q" or user_input == "q":
-        raise SystemExit()
+        quit_game()
 
 
 def display_instructions():
@@ -296,7 +311,7 @@ word to replace it. For Example:""")
     print("You can leave the games any time by\nentering Q")
     user_input = input("ENTER to continue, Q to quit: \n")
     if user_input == "Q" or user_input == "q":
-        raise SystemExit()
+        quit_game()
 
 
 def enter_num_paras():
@@ -309,7 +324,7 @@ def enter_num_paras():
         user_input = input("""Please enter number of paragraphs for
 the story (1 to 4): \n""")
         if user_input == "Q" or user_input == "q":
-            raise SystemExit()
+            quit_game()
         if len(user_input) != 1:
             print("Value entered was not valid")
         elif user_input not in "1234":
@@ -330,7 +345,7 @@ def enter_player_level():
         user_input = input("""Please enter player level
 (1 to 4, 1 easiest): \n""")
         if user_input == "Q" or user_input == "q":
-            raise SystemExit()
+            quit_game()
         if len(user_input) != 1:
             print("Value entered was not valid")
         elif user_input not in "1234":

@@ -13,6 +13,7 @@ import os
 import time
 from re import fullmatch
 from textwrap import wrap
+import colorama  # This is an external library
 from template_data import template_paragraphs
 
 # Globals
@@ -78,10 +79,7 @@ def repeat_game_loop(num_paragraphs, player_level, expected_time_per_sentence,
             expected_time_per_sentence * num_paragraphs * 3 / 2)
         display_timer(time_limit)
         # Clear the display
-        if platform.system() == "Windows":
-            os.system("cls")
-        else:
-            os.system("clear")
+        clear_console()
 
         # Do the demon's sentence display
         game_opts = sentence_loop(num_paragraphs, player_level,
@@ -200,6 +198,13 @@ def word_loop(fairy_count):
             try_again = False
 
     return {"failed": failed, "fairy_count": fairy_count}
+
+
+def clear_console():
+    """
+        Clear the display console
+    """
+    os.system("cls" if platform.system() == "Windows" else "clear")
 
 
 def get_user_corrections():

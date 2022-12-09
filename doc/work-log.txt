@@ -5,29 +5,31 @@ Contents
 Work Due
 
     README
-        Code blocks in README - use backticks
-
-        Libraries - "-" before
-
-        Deployment - use example from tutor, link to CI template
-
         Separate Systems Tests from Lint Tests
 
         Add link to flowchart in /doc/project-analysis.txt
-
-        Link to commit history at Branch from angel-v-demon-old
 
         Responsiveness tests on console
 
         Browser console tests
 
-        Remove Docstring from README object modules
-        List Methods
-
         Do Systems Tests and Screenshots on the Heroku terminal
 
 Work Done
     09/12/22
+
+    README
+
+        * Code blocks in README - use backticks
+
+        * Libraries - "-" before
+
+        * Deployment - use example from tutor, link to CI template
+
+        * Link to commit history at Branch from angel-v-demon-old
+
+        * Remove Docstring from README object modules
+        * List Methods
 
     * Code
         * Include colorama for line colors

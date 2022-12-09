@@ -230,17 +230,13 @@ The project analysis and flow-diagram appear in [project-analysis](/doc/project-
 
 Work progress appears in [work-log](/doc/work-log.txt)
 
-## Testing 
-
-Each input has been manually tested as in Systems Tests below.
-
 ## Development Staging
 
 The program was developed in Python on gitpod, using the gitpod editor and 
 python3 command.
 
-The project began on angel-v-demon-old repository on github/gitpod, which used the
-standard CI template.
+The project began on [angel-v-demon-old repository](https://github.com/RobWar-code/angel-v-demon-old) 
+on github/gitpod, which used the standard CI template, update history can be viewed prior to the move.
 
 It was then transferred to the angel-v-demon github/gitpod repository using the
 necessary CI Template for the Heroku browser terminal.

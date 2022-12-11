@@ -35,6 +35,7 @@ I01 Continue from introduction
 a. * Ensure input prompt is clearly understandable
 
 b. * Check response to garbage input
+    Continues as for Enter
 
 c. N/A Check input validation
 

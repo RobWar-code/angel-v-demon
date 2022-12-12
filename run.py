@@ -137,16 +137,15 @@ def sentence_loop(num_paragraphs, player_level, start_num_fairies,
 
     if failed:
         user_input = input("Enter Y to replay game else ENTER: \n")
-        if user_input == "Q" or user_input == "q":
+        if user_input == "q" or user_input == "Q":
             quit_game()
         if user_input == "Y" or user_input == "y":
             replay = True
         else:
             user_input = input("Enter Y to play a new game else ENTER: \n")
-            if user_input == "Q" or user_input == "q":
+            if user_input != "Y" and user_input != "y":
                 quit_game()
-            if user_input == "Y" or user_input == "y":
-                new_game = True
+            new_game = True
 
     else:
         print("The crowd cheers - YOU WIN")

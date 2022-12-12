@@ -185,7 +185,7 @@ def word_loop(fairy_count):
         failed = get_user_corrections()
         if failed:
             clear_console()
-            print(colorama.Fore.RED + "WRONG - The demon chuckles..")
+            print(colorama.Back.RED + colorama.Fore.WHITE + "WRONG - The demon chuckles..")
             if fairy_count > 0:
                 fairy_count = fairy_count - 1
                 # The fairy intervenes

@@ -200,6 +200,7 @@ def word_loop(fairy_count):
                     print()
                     print(colorama.Fore.YELLOW +
                           "A fairy saves the knight's life")
+                    time.sleep(4)
                     print()
                     try_again = False
                     failed = False

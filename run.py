@@ -125,14 +125,16 @@ def sentence_loop(num_paragraphs, player_level, start_num_fairies,
         if (paragraph_end and not failed):
             # Print the consequence
             clear_console()
-            print(colorama.Fore.GREEN + "The angel cheers:- ")
+            print(colorama.Back.GREEN + colorama.Fore.WHITE +
+                  "The angel cheers:- ")
             print("Completed Paragraph:")
             story.print_good_consequence()
             time.sleep(6)
             if paragraph_count >= num_paragraphs:
                 got_sentence = False
         elif not paragraph_end and not failed:
-            print(colorama.Fore.GREEN + "Correct")
+            print(colorama.Back.GREEN + colorama.Fore.WHITE +
+                  "Correct")
             time.sleep(4)
 
     if failed:
@@ -184,7 +186,8 @@ def word_loop(fairy_count):
         failed = get_user_corrections()
         if failed:
             clear_console()
-            print(colorama.Back.RED + colorama.Fore.WHITE + "WRONG - The demon chuckles..")
+            print(colorama.Back.RED + colorama.Fore.WHITE +
+                  "WRONG - The demon chuckles..")
             if fairy_count > 0:
                 fairy_count = fairy_count - 1
                 # The fairy intervenes

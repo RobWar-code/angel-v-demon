@@ -208,7 +208,7 @@ e. * Check that the logic flows correctly from the inputs
 
 I07 Input start another game
 
-Bug: Key Enter does does not display quit message
+Bug: Key Enter does not display quit message
 Fix: Enter call to quit_game function
 
 a. * Ensure input prompt is clearly understandable

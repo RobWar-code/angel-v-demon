@@ -5,15 +5,15 @@ Contents
 Work Due
 
     README
-        Separate Systems Tests from Lint Tests
+        * Separate Systems Tests from Lint Tests
 
-        Add link to flowchart in /doc/project-analysis.txt
+        * Add link to flowchart in /doc/project-analysis.txt
 
         Responsiveness tests on console
 
         Browser console tests
 
-        Do Systems Tests and Screenshots on the Heroku terminal
+        * Do Systems Tests and Screenshots on the Heroku terminal
 
 Work Done
     09/12/22

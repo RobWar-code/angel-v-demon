@@ -1,3 +1,21 @@
+## Responsiveness Tests
+
+1000px
+
+![1000px Introduction](/doc/readme-images/media-test-1000-a.png "1000px Introduction")
+
+![1000px Instructions](/doc/readme-images/media-test-1000-b.png "1000px Instructions")
+
+![1000px Story](/doc/readme-images/media-test-1000-c.png "1000px Story")
+
+400px
+
+![400px Introduction](/doc/readme-images/media-test-400-a.png "400px Introduction")
+
+![400px Instructions](/doc/readme-images/media-test-400-b.png "400px Instructions")
+
+![400px Story](/doc/readme-images/media-test-400-c.png "400px Story")
+
 ## Python PEP8 Linter Test
 
 [Test Platform](https://pep8ci.herokuapp.com)

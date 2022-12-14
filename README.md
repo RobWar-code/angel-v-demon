@@ -325,6 +325,8 @@ Heroku Client Game Start
 
 Responsiveness
 
+Browser Compatibility
+
 Code Test
 
 Systems Tests

@@ -4,7 +4,10 @@ Contents
 
 Work Due
 
-    README
+Work Done
+    14/12 22
+    
+    * README
         * Separate Systems Tests from Lint Tests
 
         * Add link to flowchart in /doc/project-analysis.txt
@@ -13,11 +16,8 @@ Work Due
 
         * Browser console tests
 
-        Link first commit on angel-v-demon to angel-v-demon-old
-
         * Do Systems Tests and Screenshots on the Heroku terminal
 
-Work Done
     09/12/22
 
     README

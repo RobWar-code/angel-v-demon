@@ -1,6 +1,4 @@
-## Systems Tests
-
-### Python PEP8 Linter
+## Python PEP8 Linter Test
 
 [Test Platform](https://pep8ci.herokuapp.com)
 
@@ -11,6 +9,10 @@ Main Module run.py
 Template Module
 
 ![Template Module Lint](/doc/readme-images/python_lint_para_template.png "Template Module Lint")
+
+## Systems Tests
+
+For the flowchart with the input points (i01 etc) see [Project Analysis](/doc/project-analysis.txt)
 
 ### Game Start Texts
 
@@ -45,6 +47,10 @@ e. * Check that the logic flows correctly from the inputs
 
 ![I01 Introduction](/doc/readme-images/introduction-crop.png "I01 introduction")
 
+Quit Option
+
+![I01 Quit](/doc/readme-images/i01-quit-crop.png "I01 Quit Option")
+
 I02 Continue from instructions
 
 a. * Ensure input prompt is clearly understandable
@@ -57,7 +63,11 @@ d. * Check for availability of the quit option
 
 e. * Check that the logic flows correctly from the inputs
 
-![I02 Instructions](/doc/readme-images/instructions-crop.png)
+![I02 Instructions](/doc/readme-images/instructions-crop.png "I02 Instructions")
+
+Quit Option
+
+![I02 Quit](/doc/readme-images/i02-quit-crop.png "I02 Quit")
 
 I03 Input number of paragraphs
 
@@ -121,35 +131,43 @@ d. * Check for availability of the quit option
 
 e. Check that the logic flows correctly from the inputs
 
-    * Correct Answer
+* Correct Answer
 
-        * General
-            Bug: word_loop() while condition not cancelled
-            Fix: inserted else and reset flag
+* General
+Bug: word_loop() while condition not cancelled
 
-        * End of Paragraph
+Fix: inserted else and reset flag
 
-        * End of Game
+* End of Paragraph
 
-    Incorrect Answer
+* End of Game
 
-        * Another Chance
-            Bug: word_loop() fairy-count not found
-            Fix: pass and return the fairy_count variable from the calling function
-            Bug: word_loop() math.random() does not exist
-            Fix: use random.random()
-            Bug: sentence_loop() invalid use of . notation for dict reference
-            Fix: used bracketed notation ["xx"]
+Incorrect Answer
 
-        * Fairy Saves Life
+* Another Chance
+Bug: word_loop() fairy-count not found
 
-            * Continue to next sentence
+Fix: pass and return the fairy_count variable from the calling function
 
-            * End of Game
+Bug: word_loop() math.random() does not exist
 
-        Knight Fails
-            Bug: story_template.py print_ill_consequence() misspelled variable name
-            Fix: corrected spelling
+Fix: use random.random()
+
+Bug: sentence_loop() invalid use of . notation for dict reference
+
+Fix: used bracketed notation ["xx"]
+
+* Fairy Saves Life
+
+* Continue to next sentence
+
+* End of Game
+
+Knight Fails
+
+Bug: story_template.py print_ill_consequence() misspelled variable name
+
+Fix: corrected spelling
 
 Enter Correction
 
@@ -160,6 +178,10 @@ Correct Answer
 ![I05 Correct Answer](/doc/readme-images/i05-correct-answer-crop.png "I05 Correct Answer")
 
 Fairy Saves Life after Incorrect Answer
+
+Bug: Printed message cleared immediately after print
+
+Fix: Add sleep
 
 ![I05 Fairy Saves Life](/doc/readme-images/i05-fairy-saves-life-crop.png "I05 Fairy saves life")
 
@@ -225,6 +247,10 @@ e. * Check that the logic flows correctly from the inputs
     Fix: story_template.py StoryHandler.create_story() clear down story list
 
 ![I07 Start new game](/doc/readme-images/i07-crop.png "I07 Start new game")
+
+Quit Option
+
+![I07 Quit Option](/doc/readme-images/i07-quit-crop.png "I07 Quit Option")
 
 I08 Input start another game - from I05 win
 

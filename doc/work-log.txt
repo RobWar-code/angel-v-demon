@@ -9,9 +9,11 @@ Work Due
 
         * Add link to flowchart in /doc/project-analysis.txt
 
-        Responsiveness tests on console
+        * Responsiveness tests on console
 
-        Browser console tests
+        * Browser console tests
+
+        Link first commit on angel-v-demon to angel-v-demon-old
 
         * Do Systems Tests and Screenshots on the Heroku terminal
 

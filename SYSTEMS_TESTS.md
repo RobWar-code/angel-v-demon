@@ -16,6 +16,24 @@
 
 ![400px Story](/doc/readme-images/media-test-400-c.png "400px Story")
 
+## Browser Compatibility
+
+Chrome
+
+![Chrome Browser View](/doc/readme-images/browser-chrome.png "Chrome Browser View")
+
+Edge
+
+![Edge Browser View](/doc/readme-images/browser-edge.png "Edge Browser View")
+
+Firefox
+
+![Firefox Browser View](/doc/readme-images/browser-firefox.png "Firefox Browser View")
+
+Opera
+
+![Opera Browser View](/doc/readme-images/browser-opera.png "Opera Browser View")
+
 ## Python PEP8 Linter Test
 
 [Test Platform](https://pep8ci.herokuapp.com)

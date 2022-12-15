@@ -4,6 +4,20 @@ A command-line adventure/memory game for a solo player.
 
 ![Media Samples](/doc/readme-images/media-shots-crop.png "Media Samples")
 
+## Development Staging
+
+The program was developed in Python on gitpod, using the gitpod editor and 
+python3 command.
+
+The project began on [angel-v-demon-old repository](https://github.com/RobWar-code/angel-v-demon-old) 
+on github/gitpod, which used the standard CI template, update/commit history can be viewed prior 
+to the move.
+
+It was then transferred to the angel-v-demon github/gitpod repository using the
+necessary CI Template for the Heroku browser terminal.
+
+Stage by stage commits were made, using the git version control system.
+
 ## User Considerations
 
 Any end-user who would like to play an adventure or memory game with a 
@@ -229,19 +243,6 @@ Further documentation is provided in the /doc directory.
 The project analysis and flow-diagram appear in [project-analysis](/doc/project-analysis.txt)
 
 Work progress appears in [work-log](/doc/work-log.txt)
-
-## Development Staging
-
-The program was developed in Python on gitpod, using the gitpod editor and 
-python3 command.
-
-The project began on [angel-v-demon-old repository](https://github.com/RobWar-code/angel-v-demon-old) 
-on github/gitpod, which used the standard CI template, update history can be viewed prior to the move.
-
-It was then transferred to the angel-v-demon github/gitpod repository using the
-necessary CI Template for the Heroku browser terminal.
-
-Stage by stage commits were made, using the git version control system.
 
 ## Deployment
 Code Institute has provided a [template](https://github.com/Code-Institute-Org/python-essentials-template) to display the terminal view of this backend application in a modern web browser. This is to improve the accessibility of the project to others.

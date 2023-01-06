@@ -324,6 +324,8 @@ Heroku Client Game Start
 
 ## Systems Tests
 
+For the following systems tests, see: [Systems Tests](/SYSTEMS_TESTS.md)
+
 Responsiveness
 
 Browser Compatibility
@@ -332,7 +334,6 @@ Code Test
 
 Systems Tests
 
-see: [Systems Tests](/SYSTEMS_TESTS.md)
 
 ## Credits
 CI Code Institute - The web browser terminal
